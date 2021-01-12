@@ -1,0 +1,20 @@
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-title>
+      News App
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-card *ngFor="let article of articles">
+    <img [src]="article.urlToImage" alt="News Image">
+    <ion-card-header>
+      <ion-card-title><h6>{{article.title}}</h6></ion-card-title>
+      <ion-card-subtitle><h8>{{article.author}}</h8></ion-card-subtitle>
+    </ion-card-header>
+  
+    <ion-card-content class="textsize">{{article.description}}</ion-card-content>
+  </ion-card>
+  
+</ion-content>
